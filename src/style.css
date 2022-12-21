@@ -1,0 +1,21 @@
+:root {
+
+  /* General Style */
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+/* body {
+
+}
+ */
+ 
+#app {
+  /* Centered App Container */
+  max-width: 1280px;
+  margin: 0 auto;
+}
