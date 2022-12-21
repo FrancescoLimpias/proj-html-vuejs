@@ -120,12 +120,53 @@ export default {
 
         <!-- Section: articles -->
         <section class="articles">
-            Articles Cards
+            <span class="style-signature">
+                Articles and Tips
+            </span>
+            <h2>
+                Latest from The Blog
+            </h2>
+            <ul>
+                <li v-for="article in contents.articles" :class="{ full: article.type == 'full' }">
+                    <img src="" alt="">
+                    ARTIST
+                    <h4>
+                        {{ article.title }}
+                    </h4>
+                    <span class="info">
+                        CalendarIcon {{ article.date }}
+                    </span>
+                    <span class="info">
+                        EyeIcon {{ article.views }} views
+                    </span>
+                </li>
+            </ul>
         </section>
 
         <!-- Section: events -->
         <section class="events">
-            Events Cards
+            <span class="style-signature">
+                Upcoming Events
+            </span>
+            <h2>
+                Let's Work Together
+            </h2>
+            <ul>
+                <li v-for="event in contents.events">
+                    <img src="" alt="">
+                    <div>
+                        <span class="">
+                            {{ event.date }}
+                        </span>
+                        <h4>
+                            {{ event.title }}
+                        </h4>
+                        <span class="info">
+                            {{ event.place }}
+                        </span>
+                    </div>
+                </li>
+            </ul>
         </section>
 
     </div>
@@ -191,6 +232,49 @@ export default {
 
             li {
                 flex: 0 0 23%;
+            }
+        }
+    }
+
+    .articles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style-type: none;
+
+            li {
+                flex: 0 0 23%;
+            }
+        }
+    }
+
+    .events{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style-type: none;
+
+            li {
+                flex: 0 0 45%;
+                display: flex;
+
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
             }
         }
     }

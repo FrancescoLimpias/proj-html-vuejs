@@ -24,6 +24,35 @@ export let contents = {
             job,
             path,
         }, ...
+    ],
+
+    courses: [
+        {
+            path,
+            price,
+            title,
+            lessons, (number of)
+            capacity,
+        }
+    ],
+
+    articles: [
+        {
+            path,
+            type, (semi/full height)
+            title,
+            date,
+            views,
+        }
+    ],
+
+    events: [
+        {
+            path,
+            date,
+            title,
+            place
+        }
     ]
 
      */
@@ -161,4 +190,59 @@ createContentType("courses", "path", "price", "title", "lessons", "capacity")
             "The Colored Pencil Drawing Course",
             6, 50,
         ]
+    );
+
+// Articles
+createContentType("articles", "path", "type", "title", "date", "views")
+    (
+        [
+            undefined,
+            "semi",
+            "Brush Strokes Energize Trees in Paintings",
+            "May 15, 2020",
+            688,
+        ],
+        [
+            undefined,
+            "full",
+            "Connection Between Self-Portraits and Identity",
+            "May 15, 2020",
+            307,
+        ],
+        [
+            undefined,
+            "semi",
+            "Pocket-Sized Notebooks Hold Miniature Paintings",
+            "May 15, 2020",
+            603,
+        ],
+    );
+
+// Events
+createContentType("events", "path", "date", "title", "place")
+    (
+        [
+            undefined,
+            "NOV 22, 2020",
+            "Storytelling Workshop",
+            "Texas, US",
+        ],
+        [
+            undefined,
+            "OCT 10, 2020",
+            "Painting Art Contest 2020",
+            "New York, US",
+        ],
+        [
+            undefined,
+            "NOV 23, 2020",
+            "International Art Fair 2020",
+            "Hamburg, Germany",
+        ],
+        [
+            undefined,
+            "DEC 15, 2020",
+            "Street Performance: Call for Artist",
+            "Illinois, US",
+        ],
     );
