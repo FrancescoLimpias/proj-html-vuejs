@@ -22,6 +22,12 @@ export default {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .App {}
+</style>
+
+<style lang="scss">
+span.style-signature {
+  color: #68c5f1;
+}
 </style>

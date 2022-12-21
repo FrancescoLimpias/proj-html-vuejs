@@ -1,10 +1,23 @@
 <script>
 import ReviewsCarousel from "./ReviewsCarousel.vue"
+import { contents } from "../contents.js"
 
 export default {
+
+    data() {
+        return {
+            contents,
+        };
+    },
+
     components: {
         ReviewsCarousel,
-    }
+    },
+
+    mounted() {
+        console.log(this.contents);
+    },
+
 }
 </script>
 
@@ -13,7 +26,26 @@ export default {
 
         <!-- Section: strengths -->
         <section class="strengths">
-            I understand what it takes to create.
+
+            <!-- headers -->
+            <span class="style-signature">
+                Artist coaching
+            </span>
+            <h2>
+                I understand what it takes to create.
+            </h2>
+
+            <!-- ul: strengths list -->
+            <ul>
+                <li v-for="strength of contents.strengths">
+                    <h4>
+                        {{ strength.title }}
+                    </h4>
+                    <p>
+                        {{ strength.text }}
+                    </p>
+                </li>
+            </ul>
         </section>
 
         <!-- Section: meaningful quote -->
@@ -50,5 +82,24 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.AppMain {}
+.AppMain {
+    .strengths {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .headers {
+            text-align: center;
+        }
+
+        ul {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
 </style>

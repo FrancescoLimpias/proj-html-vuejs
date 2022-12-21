@@ -52,8 +52,8 @@
         <div class="hero">
             <div class="center">
 
-                <span class="signature">
-                    Hello, I'm Martin
+                <span class="style-signature">
+                    Hello, Im Martin
                 </span>
 
                 <h2>
