@@ -14,10 +14,6 @@ export default {
         ReviewsCarousel,
     },
 
-    mounted() {
-        console.log(this.contents);
-    },
-
 }
 </script>
 
@@ -64,20 +60,29 @@ export default {
                 get you back on track to being the productive, creative, meaningful and authentic artist you truly want
                 to be.I support artists in crafting and living a creative life as well as feeling good about themselves
                 and their art.
-                <br/>
+                <br />
                 As an artist and an educator for nearly 30 years, I understand what it takes to create.
-                <br/>
+                <br />
                 <button>Get started today</button>
             </div>
         </section>
 
         <!-- Section: video -->
         <section class="video">
-            Play
+            <div>
+                <img src="" alt="">
+                PlayIcon
+            </div>
         </section>
 
         <!-- Section: reviews carousel -->
         <section class="reviews-carousel">
+            <span class="style-signature">
+                Testimonials
+            </span>
+            <h2>
+                Why do girls love me?
+            </h2>
             <ReviewsCarousel />
         </section>
 
@@ -101,6 +106,11 @@ export default {
 
 <style lang="scss" scoped>
 .AppMain {
+
+    section {
+        margin: 2rem 0;
+    }
+
     .strengths {
 
         display: flex;
@@ -120,18 +130,24 @@ export default {
         }
     }
 
-    .quote{
+    .quote {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        div{
+        div {
             flex: 0 0 50%;
         }
 
-        .capture{
+        .capture {
             text-align: center;
         }
+    }
+
+    .reviews-carousel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 </style>
