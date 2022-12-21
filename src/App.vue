@@ -1,5 +1,6 @@
 <script>
 // import components
+import AppAbsoluteNav from "./components/AppAbsoluteNav.vue";
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
@@ -7,6 +8,7 @@ import AppFooter from "./components/AppFooter.vue";
 // component declarations
 export default {
   components: {
+    AppAbsoluteNav,
     AppHeader,
     AppMain,
     AppFooter,
@@ -16,9 +18,21 @@ export default {
 
 <template>
   <div class="App">
-    <AppHeader />
-    <AppMain />
-    <AppFooter />
+
+    <AppAbsoluteNav />
+
+    <header>
+      <AppHeader />
+    </header>
+
+    <main>
+      <AppMain />
+    </main>
+
+    <footer>
+      <AppFooter />
+    </footer>
+
   </div>
 </template>
 
