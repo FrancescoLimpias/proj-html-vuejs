@@ -3,12 +3,20 @@
 
 <template>
     <div class="AppFooter">
-        AppFooter
+
+        <!-- Form: newsletter -->
+        <div class="newsletter">
+            Newsletter to get in touch
+        </div>
+
+        <!-- Navbar -->
+        <nav>
+            Navbar
+        </nav>
+
     </div>
 </template>
 
 <style lang="scss" scoped>
-.AppFooter{
-    
-}
+.AppFooter {}
 </style>
