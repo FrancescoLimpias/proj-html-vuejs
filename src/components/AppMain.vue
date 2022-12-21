@@ -88,7 +88,34 @@ export default {
 
         <!-- Section: courses -->
         <section class="courses">
-            Courses grid
+            <span class="style-signature">
+                Artist coaching
+            </span>
+            <h2>
+                Latest Online Courses
+            </h2>
+            <ul>
+                <li v-for="course in contents.courses">
+                    <img src="" alt="">
+                    <span class="price">
+                        &#x24;{{ course.price.toFixed(2) }}
+                    </span>
+                    <h4>
+                        {{ course.title }}
+                    </h4>
+                    <span class="info">
+                        FileIcon
+                        {{ course.lessons }} Lessons
+                    </span>
+                    <span class="info">
+                        PersonIcon
+                        {{ course.capacity }} Students
+                    </span>
+                </li>
+            </ul>
+            <button>
+                View all courses ->
+            </button>
         </section>
 
         <!-- Section: articles -->
@@ -148,6 +175,24 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .courses {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style-type: none;
+
+            li {
+                flex: 0 0 23%;
+            }
+        }
     }
 }
 </style>

@@ -109,3 +109,56 @@ createContentType("testimonials", "capture", "description", "author", "job", "pa
             undefined,
         ],
     );
+
+// Courses
+createContentType("courses", "path", "price", "title", "lessons", "capacity")
+    (
+        [
+            undefined,
+            18,
+            "The Acrylic Painting Academy",
+            4, 50,
+        ],
+        [
+            undefined,
+            21,
+            "Drawing and Shading: Complete Course",
+            14, 50,
+        ],
+        [
+            undefined,
+            19,
+            "The Color Theory for Digital Artist",
+            7, 50,
+        ],
+        [
+            undefined,
+            35,
+            "Ultimate Guide to Digital Sketching for Beginner",
+            14, 50,
+        ],
+        [
+            undefined,
+            19,
+            "Portrait Drawing The Smart Way",
+            2, 50,
+        ],
+        [
+            undefined,
+            19,
+            "Mastering Watercolor Painting from Beginner",
+            9, 50,
+        ],
+        [
+            undefined,
+            25,
+            "The Art & Science of Drawing",
+            4, 50,
+        ],
+        [
+            undefined,
+            22,
+            "The Colored Pencil Drawing Course",
+            6, 50,
+        ]
+    );
