@@ -53,6 +53,17 @@ export let contents = {
             title,
             place
         }
+    ],
+
+    footerMaps: [
+        {
+            title,
+            infos: [
+                link1,
+                link2,
+                ...
+            ],
+        }, ...
     ]
 
      */
@@ -245,4 +256,36 @@ createContentType("events", "path", "date", "title", "place")
             "Street Performance: Call for Artist",
             "Illinois, US",
         ],
+    );
+
+// Footer Map
+createContentType("footerMaps", "title", "infos")
+    (
+        [
+            "Address",
+            [
+                "382 NE 191st St # 87394 Miami, FL 33179 - 3899",
+                "+ 1(305) 547 - 9909(9am - 5pm EST, Monday - Friday)",
+                "support@maxcoach.com"
+            ]
+        ],
+        [
+            "Explore",
+            [
+                "Start here",
+                "Success story",
+                "Blog",
+                "Courses",
+                "Contact us"
+            ]
+        ],
+        [
+            "Information",
+            [
+                "Membership",
+                "Purchase guide",
+                "Privacy policy",
+                "Terms of services",
+            ]
+        ]
     );

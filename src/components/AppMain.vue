@@ -43,7 +43,7 @@ export default {
             <ul>
                 <li v-for="(strength, index) of contents.strengths">
                     <img :src="getImagePath('../assets/graphics/strengths/artist-box-image-0' + (index + 1) + '.png')"
-                        alt="Ciao" />
+                        alt="">
                     <h4>
                         {{ strength.title }}
                     </h4>
@@ -312,11 +312,12 @@ export default {
                 flex: 0 0 23%;
                 margin-bottom: 1rem;
 
-                &>*{
+                &>* {
                     display: inline-block;
                 }
 
-                span, h4{
+                span,
+                h4 {
                     margin: 1.3rem 1.3rem 0;
                 }
 
