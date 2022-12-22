@@ -1,0 +1,17 @@
+// Palette
+$accent_orange: #ef6f31;
+$accent_indigo: #3f3a64;
+$primary-white: #fbf9f6;
+
+// Common
+a.orange-button{
+    background-color: $accent_orange;
+    color: white;
+    font-weight: 600;
+    padding: .5rem 1.6rem;
+    border-radius: 6px;
+}
+
+span.style-signature {
+  color: #68c5f1;
+}

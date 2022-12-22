@@ -37,11 +37,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.App {}
-</style>
-
-<style lang="scss">
-span.style-signature {
-  color: #68c5f1;
-}
+/* .App {
+  // overflow: initial;
+} */
 </style>

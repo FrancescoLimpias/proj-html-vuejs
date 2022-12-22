@@ -7,18 +7,17 @@
         <!-- Tickets countdown -->
         <div class="ticket">
 
-            <span>
+            <span class="text">
                 Starts TOMORROW! Our biggest event of the year...
             </span>
 
             <span class="countdown">
-                Clock Icon
-                00 : 00 : 00 : 00
+                🕓 00 : 00 : 00 : 00
             </span>
 
-            <button>
-                Get Ticket
-            </button>
+            <a class="orange-button">
+                Get ticket
+            </a>
 
         </div>
 
@@ -27,22 +26,30 @@
 
             <!-- header 1 -->
             <a href="">
-                <h1>
-                    MaxCoach
-                </h1>
+                <img src="../assets/UI/dark-logo.png" alt="">
             </a>
 
             <!-- main index -->
-            <ul>
+            <ul class="index">
                 <li>
                     Home
+                    <i class="fa-solid fa-angle-down"></i>
                 </li>
             </ul>
 
             <!-- socials index -->
-            <ul>
+            <ul class="social">
                 <li>
-                    Twitter
+                    <i class="fa-brands fa-twitter"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-facebook"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-instagram"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-linkedin"></i>
                 </li>
             </ul>
 
@@ -61,9 +68,9 @@
                     <br /> Might Be for You
                 </h2>
 
-                <button>
+                <a class="orange-button">
                     Get started today
-                </button>
+                </a>
 
             </div>
         </div>
@@ -72,30 +79,92 @@
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/general.scss" as *;
+
 .AppHeader {
     .ticket {
         // Style
         background-color: #f5f5f5;
+        padding: .3rem;
 
         // Inner (partitioning)
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 1.5rem;
+
+        .text {
+            color: #898989;
+        }
+
+        .countdown {
+            color: $accent-indigo;
+            font-weight: 600;
+            font-size: large;
+        }
+
+        a {
+            margin-left: .6rem;
+        }
     }
 
     nav {
+        /* 
+        position: sticky;
+        top: 0px; 
+        */
+
         // Inner
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        padding: 1.5rem 6%;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        &>a {
+            img {
+                height: 1.8rem;
+            }
+        }
+
+        .social {
+            color: #696969;
+        }
     }
 
     .hero {
+        // Style
+        height: 740px;
+        background-color: $primary-white;
+
+        // Inner
         display: flex;
         justify-content: center;
         align-items: center;
-        .center{
+
+        .center {
             text-align: center;
+            font-size: 1.7rem;
+
+            span {
+                font-size: 2rem;
+            }
+
+            h2 {
+                margin-top: 1rem;
+                margin-bottom: 3rem;
+            }
+
+            a {
+                display: inline-block;
+                font-size: initial;
+                padding: 1.4rem 3rem;
+            }
         }
     }
 }
