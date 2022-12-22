@@ -100,7 +100,7 @@ export default {
                 Testimonials
             </span>
             <h2>
-                Why do girls love me?
+                Why do people love me?
             </h2>
             <ReviewsCarousel />
         </section>
@@ -114,8 +114,8 @@ export default {
                 Latest Online Courses
             </h2>
             <ul>
-                <li v-for="course in contents.courses">
-                    <img src="" alt="">
+                <li v-for="(course, index) in contents.courses">
+                    <img :src="getImagePath('../assets/images/artist-course-0' + (index + 1) + '-480x480.jpg')" alt="">
                     <span class="price">
                         &#x24;{{ course.price.toFixed(2) }}
                     </span>
@@ -123,11 +123,11 @@ export default {
                         {{ course.title }}
                     </h4>
                     <span class="info">
-                        FileIcon
+                        <i class="fa-regular fa-file-lines"></i>
                         {{ course.lessons }} Lessons
                     </span>
                     <span class="info">
-                        PersonIcon
+                        <i class="fa-regular fa-user"></i>
                         {{ course.capacity }} Students
                     </span>
                 </li>
@@ -305,11 +305,34 @@ export default {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 2rem;
             list-style-type: none;
 
             li {
                 flex: 0 0 23%;
+                margin-bottom: 1rem;
+
+                &>*{
+                    display: inline-block;
+                }
+
+                span, h4{
+                    margin: 1.3rem 1.3rem 0;
+                }
+
+                img {
+                    max-width: 100%;
+                }
+
+                .price {
+                    color: $accent_orange;
+                    font-weight: 600;
+                }
+
+                h4 {
+                    font-size: large;
+                }
+
             }
         }
     }
