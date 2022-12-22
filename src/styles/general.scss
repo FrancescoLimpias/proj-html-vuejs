@@ -13,6 +13,16 @@ a.orange-button {
   border-radius: 6px;
 }
 
+a.orange-button.inverted {
+  background-color: #fdf0ea;
+  color: $accent_orange;
+
+  &:hover {
+    background-color: $accent_orange;
+    color: white;
+  }
+}
+
 span.style-signature {
   font-family: 'Oooh Baby', cursive;
   font-size: 50px;

@@ -80,15 +80,17 @@ export default {
                 <p>
                     As an artist and an educator for nearly 30 years, I understand what it takes to create.
                 </p>
-                <a class="orange-button">Get started today</a>
+                <a class="orange-button inverted">Get started today</a>
             </div>
         </section>
 
         <!-- Section: video -->
         <section class="video">
-            <div>
-                <img src="" alt="">
-                PlayIcon
+            <div class="player">
+                <img src="../assets/images/artist-video-poster.jpg" alt="">
+                <a href="">
+                    <img src="../assets/UI/icon-youtube-play.png" alt="">
+                </a>
             </div>
         </section>
 
@@ -261,6 +263,29 @@ export default {
 
             h2 {
                 font-size: xxx-large;
+            }
+        }
+
+        .description>a {
+            padding: 1rem 2rem;
+        }
+    }
+
+    .video {
+        padding-bottom: 3rem;
+        display: flex;
+        justify-content: center;
+
+        .player {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
             }
         }
     }
