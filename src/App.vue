@@ -36,6 +36,10 @@ export default {
   </div>
 </template>
 
+<style lang="scss">
+@use "./styles/general.scss" as *;
+</style>
+
 <style lang="scss" scoped>
 /* .App {
   // overflow: initial;

@@ -60,7 +60,7 @@
             <div class="center">
 
                 <span class="style-signature">
-                    Hello, Im Martin
+                    Hello, Im Matin
                 </span>
 
                 <h2>
@@ -98,7 +98,7 @@
         }
 
         .countdown {
-            color: $accent-indigo;
+            color: $accent_indigo;
             font-weight: 600;
             font-size: large;
         }
@@ -152,7 +152,7 @@
             font-size: 1.7rem;
 
             span {
-                font-size: 2rem;
+                font-size: 3.8rem;
             }
 
             h2 {

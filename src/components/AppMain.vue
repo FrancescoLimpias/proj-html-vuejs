@@ -10,6 +10,12 @@ export default {
         };
     },
 
+    methods: {
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href;
+        }
+    },
+
     components: {
         ReviewsCarousel,
     },
@@ -29,14 +35,19 @@ export default {
             </span>
             <h2>
                 I understand what it takes to create.
+                <br>
+                I can help you with
             </h2>
 
             <!-- ul: strengths list -->
             <ul>
-                <li v-for="strength of contents.strengths">
+                <li v-for="(strength, index) of contents.strengths">
+                    <img :src="getImagePath('../assets/graphics/strengths/artist-box-image-0' + (index + 1) + '.png')"
+                        alt="Ciao" />
                     <h4>
                         {{ strength.title }}
                     </h4>
+                    <br>
                     <p>
                         {{ strength.text }}
                     </p>
@@ -47,23 +58,29 @@ export default {
         <!-- Section: meaningful quote -->
         <section class="quote">
             <div class="capture">
-                Quote Icon
-                <br />
-                "I coach and mentor visual artists, like you, to Create Like You Mean It"
+                <i class="fa-solid fa-quote-right"></i>
+                <h2>
+                    "I coach and mentor visual artists, like you, to Create Like You Mean It"
+                </h2>
                 <br />
                 <span class="style-signature">
                     Martin Garrix
                 </span>
             </div>
             <div class="description">
-                As a coach and mentor, my ultimate goal is to motivate visual artists toward inspired action. I help you
-                get you back on track to being the productive, creative, meaningful and authentic artist you truly want
-                to be.I support artists in crafting and living a creative life as well as feeling good about themselves
-                and their art.
-                <br />
-                As an artist and an educator for nearly 30 years, I understand what it takes to create.
-                <br />
-                <button>Get started today</button>
+                <p>
+                    As a coach and mentor, my ultimate goal is to motivate visual artists toward inspired action. I help
+                    you
+                    get you back on track to being the productive, creative, meaningful and authentic artist you truly
+                    want
+                    to be.I support artists in crafting and living a creative life as well as feeling good about
+                    themselves
+                    and their art.
+                </p>
+                <p>
+                    As an artist and an educator for nearly 30 years, I understand what it takes to create.
+                </p>
+                <a class="orange-button">Get started today</a>
             </div>
         </section>
 
@@ -173,10 +190,19 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/general.scss' as *;
+
 .AppMain {
 
     section {
-        margin: 2rem 0;
+        margin: 60px 0;
+        padding: 0 15%; //Base sections padding
+    }
+
+    section>h2 {
+        text-align: center;
+        font-size: xx-large;
+        margin-bottom: 5rem;
     }
 
     .strengths {
@@ -184,31 +210,58 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-
-        .headers {
-            text-align: center;
-        }
+        align-items: baseline;
 
         ul {
-
+            height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
+            list-style-type: none;
+            gap: 2rem;
+            line-height: 1.6rem;
+
+            li {
+                align-self: flex-start;
+            }
+
+            li:nth-child(even) {
+                align-self: flex-end;
+            }
         }
     }
 
     .quote {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        gap: 10%;
+        height: 550px;
+        // padding: 5rem 0;
 
         div {
-            flex: 0 0 50%;
+            flex: 0 0 40%;
+        }
+
+        p {
+            margin-bottom: 2.5rem;
+            font-size: large;
         }
 
         .capture {
+            position: relative;
             text-align: center;
+
+            i {
+                position: absolute;
+                top: -4rem;
+                color: $accent_orange;
+                font-size: xxx-large;
+            }
+
+            h2 {
+                font-size: xxx-large;
+            }
         }
     }
 
@@ -254,7 +307,7 @@ export default {
         }
     }
 
-    .events{
+    .events {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -270,7 +323,7 @@ export default {
                 flex: 0 0 45%;
                 display: flex;
 
-                div{
+                div {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
