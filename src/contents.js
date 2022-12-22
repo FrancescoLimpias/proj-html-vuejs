@@ -99,6 +99,21 @@ function createContentType(name, ...keys) {
     };
 }
 
+// headerMap
+createContentType("headerMaps", "links")
+    (
+        [
+            [
+                "Home",
+                "Pages",
+                "Courses",
+                "Features",
+                "Blog",
+                "Shop",
+            ]
+        ],
+    )
+
 // Strength Cards
 createContentType("strengths", "title", "text", "path") /* (content type declaration) */
     //Content Type "fill" (bulk add operation)

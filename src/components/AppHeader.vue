@@ -1,4 +1,14 @@
 <script>
+import { contents } from "../contents.js"
+
+export default {
+
+    data() {
+        return {
+            contents,
+        };
+    },
+}
 </script>
 
 <template>
@@ -31,8 +41,8 @@
 
             <!-- main index -->
             <ul class="index">
-                <li>
-                    Home
+                <li v-for="link in contents.headerMaps[0].links">
+                    {{ link }}
                     <i class="fa-solid fa-angle-down"></i>
                 </li>
             </ul>

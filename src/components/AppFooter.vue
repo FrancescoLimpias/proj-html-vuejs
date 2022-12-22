@@ -82,6 +82,8 @@ export default {
 
     .rights {
         text-align: center;
+        margin: 4rem 0;
+        color: #ababab;
     }
 }
 </style>
