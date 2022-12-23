@@ -132,9 +132,9 @@ export default {
                     </span>
                 </li>
             </ul>
-            <button>
+            <a class="orange-button inverted">
                 View all courses ->
-            </button>
+            </a>
         </section>
 
         <!-- Section: articles -->
