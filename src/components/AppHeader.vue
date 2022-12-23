@@ -99,7 +99,7 @@ export default {
     .ticket {
         // Style
         background-color: #f5f5f5;
-        padding: .3rem;
+        padding: .5rem;
 
         // Inner (partitioning)
         display: flex;
@@ -137,7 +137,7 @@ export default {
         ul {
             list-style-type: none;
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
         }
 
         &>a {
@@ -155,7 +155,15 @@ export default {
         position: relative;
         // Style
         height: 740px;
-        background-color: $primary-white;
+        background:
+            url('../assets/graphics/artist-shape-01.png') 93% 0%,
+            url('../assets/graphics/hero/artist-shape-04.png') 94% 10%,
+            url('../assets/graphics/hero/artist-shape-05.png') 97% 100%,
+            url('../assets/graphics/hero/artist-hero-image-03.png') 27% 95%,
+            url('../assets/graphics/artist-shape-03.png') 1% 65%,
+            $primary-white,
+        ;
+        background-repeat: no-repeat;
 
         // Inner
         display: flex;
@@ -182,20 +190,22 @@ export default {
             }
         }
 
-        img{
+        img {
             position: absolute;
             box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .artist{
+        .artist {
             bottom: 10%;
             right: 10%;
         }
-        .port1{
+
+        .port1 {
             left: 7%;
             bottom: 10%;
         }
-        .port2{
+
+        .port2 {
             left: 16%;
             top: 15%;
         }

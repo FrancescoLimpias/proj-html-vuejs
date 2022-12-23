@@ -210,6 +210,11 @@ export default {
 
 .AppMain {
 
+    background: 
+    url('../assets/graphics/artist-shape-01 - flipped.png') -8% 0% no-repeat,
+    url('../assets/graphics/maxcoach-shape-14.png')  no-repeat;
+    background-size: 600px 577px, 2048px 458px ;
+
     section {
         margin: 60px 0;
         padding: 0 15%; //Base sections padding
@@ -464,7 +469,7 @@ export default {
                 gap: 2.6rem;
 
                 &:nth-child(2n+3),
-                &:nth-child(2n+4){
+                &:nth-child(2n+4) {
                     flex-direction: row-reverse;
                     text-align: right;
                 }
@@ -479,7 +484,7 @@ export default {
                         color: #7d7d7d;
                     }
 
-                    .info{
+                    .info {
                         font-size: small;
                     }
                 }

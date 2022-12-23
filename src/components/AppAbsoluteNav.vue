@@ -46,6 +46,7 @@
         position: fixed;
         top: 20%;
         right: 0px;
+        z-index: 100;
 
         // style
         box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -83,6 +84,7 @@
         position: fixed;
         bottom: 2rem;
         right: 2rem;
+        z-index: 100;
 
         // size
         width: 60px;
