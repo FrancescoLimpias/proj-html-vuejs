@@ -210,10 +210,10 @@ export default {
 
 .AppMain {
 
-    background: 
-    url('../assets/graphics/artist-shape-01 - flipped.png') -8% 0% no-repeat,
-    url('../assets/graphics/maxcoach-shape-14.png')  no-repeat;
-    background-size: 600px 577px, 2048px 458px ;
+    background:
+        url('../assets/graphics/artist-shape-01 - flipped.png') -8% 0% no-repeat,
+        url('../assets/graphics/maxcoach-shape-14.png') no-repeat;
+    background-size: 600px 577px, 2048px 458px;
 
     section {
         margin: 60px 0;
@@ -313,6 +313,9 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        // style
+        background-color: #faf8f6;
+        padding: 1rem 2rem;
     }
 
     .courses {
@@ -358,6 +361,10 @@ export default {
     }
 
     .articles {
+
+        background:
+            url('../assets/graphics/maxcoach-shape-14.png') 0 50% no-repeat;
+        background-size: 2048px 458px;
         // style
         height: 1150px;
         background-color: #f5f7fa;
@@ -385,6 +392,7 @@ export default {
 
             li {
                 position: relative;
+                background-color: white;
 
                 // style
                 overflow: hidden;
@@ -420,7 +428,7 @@ export default {
                 }
 
                 h4 {
-                    font-size: large;
+                    font-size: 16px;
                 }
 
                 span {

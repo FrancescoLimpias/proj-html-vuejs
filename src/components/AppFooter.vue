@@ -77,10 +77,14 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/general.scss' as *;
+
 .AppFooter {
     .newsletter {
         // style
-        background-color: #244186;
+        background:
+            url('../assets/graphics/artist-shape-color-paint-bottom-right.png') 100% 100% no-repeat,
+            url('../assets/graphics/artist-shape-color-paint-top-left.png') 0 0 no-repeat,
+            #244186;
         height: 200px;
         color: white;
         margin-bottom: 6.8rem;
@@ -160,7 +164,7 @@ export default {
                 display: inline-block;
             }
 
-            .detail{
+            .detail {
                 color: $accent_orange;
             }
 
