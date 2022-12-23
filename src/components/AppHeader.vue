@@ -83,6 +83,10 @@ export default {
                 </a>
 
             </div>
+
+            <img src="../assets/images/artist-hero-image-04.jpg" alt="" class="artist">
+            <img src="../assets/images/artist-hero-image-02.jpg" alt="" class="port2">
+            <img src="../assets/images/artist-hero-image-01.jpg" alt="" class="port1">
         </div>
 
     </div>
@@ -148,6 +152,7 @@ export default {
     }
 
     .hero {
+        position: relative;
         // Style
         height: 740px;
         background-color: $primary-white;
@@ -175,6 +180,24 @@ export default {
                 font-size: initial;
                 padding: 1.4rem 3rem;
             }
+        }
+
+        img{
+            position: absolute;
+            box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .artist{
+            bottom: 10%;
+            right: 10%;
+        }
+        .port1{
+            left: 7%;
+            bottom: 10%;
+        }
+        .port2{
+            left: 16%;
+            top: 15%;
         }
     }
 }
