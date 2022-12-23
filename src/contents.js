@@ -58,6 +58,7 @@ export let contents = {
     footerMaps: [
         {
             title,
+            detail,
             infos: [
                 link1,
                 link2,
@@ -274,10 +275,11 @@ createContentType("events", "path", "date", "title", "place")
     );
 
 // Footer Map
-createContentType("footerMaps", "title", "infos")
+createContentType("footerMaps", "title", "detail", "infos")
     (
         [
             "Address",
+            undefined,
             [
                 "382 NE 191st St # 87394 Miami, FL 33179 - 3899",
                 "+ 1(305) 547 - 9909(9am - 5pm EST, Monday - Friday)",
@@ -286,6 +288,7 @@ createContentType("footerMaps", "title", "infos")
         ],
         [
             "Explore",
+            undefined,
             [
                 "Start here",
                 "Success story",
@@ -296,11 +299,21 @@ createContentType("footerMaps", "title", "infos")
         ],
         [
             "Information",
+            undefined,
             [
                 "Membership",
                 "Purchase guide",
                 "Privacy policy",
                 "Terms of services",
+            ]
+        ],
+        [
+            "Instagram",
+            "@maxcoach",
+            [
+                "120012142_177596140500760_8623485824101406058_n.jpg",
+                "120084500_197897808368764_8114555493043279565_n.jpg",
+                "120099363_364334431619755_7198812647386067017_n.jpg"
             ]
         ]
     );
