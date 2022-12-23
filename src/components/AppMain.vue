@@ -20,6 +20,10 @@ export default {
         ReviewsCarousel,
     },
 
+    mounted() {
+        contents.events.reverse();
+    },
+
 }
 </script>
 
@@ -147,17 +151,25 @@ export default {
             </h2>
             <ul>
                 <li v-for="article in contents.articles" :class="{ full: article.type == 'full' }">
-                    <img src="" alt="">
-                    ARTIST
-                    <h4>
-                        {{ article.title }}
-                    </h4>
-                    <span class="info">
-                        CalendarIcon {{ article.date }}
-                    </span>
-                    <span class="info">
-                        EyeIcon {{ article.views }} views
-                    </span>
+                    <img :src="getImagePath('../assets/images/' + article.image_path)" alt="">
+                    <div class="over">
+                        <span>
+                            ARTIST
+                        </span>
+                        <h4>
+                            {{ article.title }}
+                        </h4>
+                        <div class="info">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                {{ article.date }}
+                            </span>
+                            <span>
+                                <i class="fa-regular fa-eye"></i>
+                                {{ article.views }} views
+                            </span>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -172,15 +184,17 @@ export default {
             </h2>
             <ul>
                 <li v-for="event in contents.events">
-                    <img src="" alt="">
+                    <img :src="getImagePath('../assets/images/artist-event-0' + event.image_index + '-250x300.jpg')"
+                        alt="">
                     <div>
-                        <span class="">
+                        <span class="date">
                             {{ event.date }}
                         </span>
                         <h4>
                             {{ event.title }}
                         </h4>
                         <span class="info">
+                            <i class="fa-solid fa-location-dot"></i>
                             {{ event.place }}
                         </span>
                     </div>
@@ -212,7 +226,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: baseline;
+        align-items: center;
 
         ul {
             height: 300px;
@@ -339,6 +353,12 @@ export default {
     }
 
     .articles {
+        // style
+        height: 1150px;
+        background-color: #f5f7fa;
+        padding: 5.5rem 0 2rem;
+
+        // inner
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -347,11 +367,75 @@ export default {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 4rem;
             list-style-type: none;
 
+            li:first-of-type {
+                top: 11rem;
+            }
+
+            li:last-of-type {
+                top: 4rem;
+            }
+
             li {
-                flex: 0 0 23%;
+                position: relative;
+
+                // style
+                overflow: hidden;
+                box-shadow: 0 2px 40px 20px rgba(0, 0, 0, 0.1);
+                line-height: 2rem;
+
+                .over {
+                    // position
+                    position: absolute;
+                    left: 0px;
+                    bottom: 1rem;
+
+                    // style
+                    padding: 8%;
+                }
+
+                span {
+                    margin-right: 1.4rem;
+                }
+
+                .info {
+                    margin-top: .5rem;
+                    font-size: small;
+                }
+            }
+
+            li:not(.full) {
+                height: 385px;
+                width: 270px;
+
+                img {
+                    width: 100%;
+                }
+
+                h4 {
+                    font-size: large;
+                }
+
+                span {
+                    color: #717171;
+                }
+            }
+
+            li.full {
+                height: 678px;
+                width: 500px;
+                color: white;
+                text-shadow: 0 0 1px black;
+
+                img {
+                    filter: brightness(0.9);
+                }
+
+                h4 {
+                    font-size: xx-large;
+                }
             }
         }
     }
@@ -360,22 +444,44 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-top: 1rem;
 
         ul {
+            // style
+            list-style-type: none;
+
+            // inner
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 1rem;
-            list-style-type: none;
+            // flex-direction: row-reverse;
+            gap: 4.5rem;
 
             li {
-                flex: 0 0 45%;
+                flex: 0 0 40%;
                 display: flex;
+                justify-content: flex-start;
+                gap: 2.6rem;
+
+                &:nth-child(2n+3),
+                &:nth-child(2n+4){
+                    flex-direction: row-reverse;
+                    text-align: right;
+                }
 
                 div {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    line-height: 2.6rem;
+
+                    span {
+                        color: #7d7d7d;
+                    }
+
+                    .info{
+                        font-size: small;
+                    }
                 }
             }
         }

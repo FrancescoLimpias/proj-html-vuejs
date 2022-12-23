@@ -64,6 +64,7 @@
                 font-size: 1.1rem;
                 background-color: transparent;
                 transition: all .2s ease;
+                text-shadow: 0 0 2px white;
 
                 &:hover {
                     position: relative;
@@ -109,7 +110,7 @@
             transition: all .2s ease;
         }
 
-        &:hover span{
+        &:hover span {
             position: relative;
             top: -1.5rem;
             font-size: xxx-large;

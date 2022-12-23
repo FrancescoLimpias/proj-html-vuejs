@@ -220,24 +220,24 @@ createContentType("courses", "path", "price", "title", "lessons", "capacity")
     );
 
 // Articles
-createContentType("articles", "path", "type", "title", "date", "views")
+createContentType("articles", "image_path", "type", "title", "date", "views")
     (
         [
-            undefined,
+            "artist-blog-03-480x356.jpeg",
             "semi",
             "Brush Strokes Energize Trees in Paintings",
             "May 15, 2020",
             688,
         ],
         [
-            undefined,
+            "artist-blog-02-500x680.jpg",
             "full",
             "Connection Between Self-Portraits and Identity",
             "May 15, 2020",
             307,
         ],
         [
-            undefined,
+            "artist-blog-01-480x356.jpg",
             "semi",
             "Pocket-Sized Notebooks Hold Miniature Paintings",
             "May 15, 2020",
@@ -246,28 +246,28 @@ createContentType("articles", "path", "type", "title", "date", "views")
     );
 
 // Events
-createContentType("events", "path", "date", "title", "place")
+createContentType("events", "image_index", "date", "title", "place")
     (
         [
-            undefined,
+            4,
             "NOV 22, 2020",
             "Storytelling Workshop",
             "Texas, US",
         ],
         [
-            undefined,
+            3,
             "OCT 10, 2020",
             "Painting Art Contest 2020",
             "New York, US",
         ],
         [
-            undefined,
+            2,
             "NOV 23, 2020",
             "International Art Fair 2020",
             "Hamburg, Germany",
         ],
         [
-            undefined,
+            1,
             "DEC 15, 2020",
             "Street Performance: Call for Artist",
             "Illinois, US",
